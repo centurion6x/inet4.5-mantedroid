@@ -226,7 +226,7 @@ class INET_API NetworkInterface : public queueing::PacketProcessorBase, public q
     void setHasModulePathAddress(bool value) { hasModulePathAddress = value; }
     const ModuleIdAddress getModuleIdAddress() const { return hasModuleIdAddress ? ModuleIdAddress(getId()) : ModuleIdAddress(0); }
     const ModulePathAddress getModulePathAddress() const {
-        EV_DEBUG << "hasModulePathAddress: " << hasModulePathAddress << endl;
+        // EV_DEBUG << "hasModulePathAddress: " << hasModulePathAddress << endl;
         return hasModulePathAddress ? ModulePathAddress(getId()) : ModulePathAddress(0); }
     const L3Address getNetworkAddress() const;
     virtual bool hasNetworkAddress(const L3Address& address) const;

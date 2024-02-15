@@ -23,7 +23,7 @@
 #include "inet/networklayer/base/NetworkProtocolBase.h"
 #include "inet/networklayer/common/L3Address.h"
 #include "inet/networklayer/contract/INetworkProtocol.h"
-#include "inet/networklayer/extras/tarpf/TarpFHeader_m.h"
+#include "inet/networklayer/tarpf/TarpFHeader_m.h"
 
 namespace inet {
 

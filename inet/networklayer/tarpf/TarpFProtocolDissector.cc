@@ -16,8 +16,8 @@
 #include "TarpFProtocolDissector.h"
 
 #include "inet/common/packet/dissector/ProtocolDissectorRegistry.h"
-#include "inet/networklayer/extras/tarpf/TarpFHeader_m.h"
-#include "inet/networklayer/extras/tarpf/TarpFProtocolDissector.h"
+#include "inet/networklayer/tarpf/TarpFHeader_m.h"
+#include "inet/networklayer/tarpf/TarpFProtocolDissector.h"
 
 namespace inet {
 

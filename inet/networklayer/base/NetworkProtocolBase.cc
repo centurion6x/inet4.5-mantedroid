@@ -71,6 +71,7 @@ void NetworkProtocolBase::sendUp(cMessage *message)
             }
         }
         if (contains(upperProtocols, protocol)) {
+            EV_DEBUG << "passing to protocol echo?" << endl ;
             EV_INFO << "Passing up to protocol " << protocol->getName() << "\n";
             emit(packetSentToUpperSignal, packet);
             send(packet, "transportOut");

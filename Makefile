@@ -567,8 +567,6 @@ OBJS = \
     $O/inet/networklayer/diffserv/SingleRateThreeColorMeter.o \
     $O/inet/networklayer/diffserv/TokenBucketMeter.o \
     $O/inet/networklayer/diffserv/TwoRateThreeColorMeter.o \
-    $O/inet/networklayer/extras/tarpf/TarpF.o \
-    $O/inet/networklayer/extras/tarpf/TarpFProtocolDissector.o \
     $O/inet/networklayer/flooding/Flooding.o \
     $O/inet/networklayer/flooding/FloodingProtocolDissector.o \
     $O/inet/networklayer/flooding/FloodingProtocolPrinter.o \
@@ -634,6 +632,8 @@ OBJS = \
     $O/inet/networklayer/rsvpte/RsvpProtocolDissector.o \
     $O/inet/networklayer/rsvpte/RsvpTe.o \
     $O/inet/networklayer/rsvpte/Utils.o \
+    $O/inet/networklayer/tarpf/TarpF.o \
+    $O/inet/networklayer/tarpf/TarpFProtocolDissector.o \
     $O/inet/networklayer/ted/LinkStateRouting.o \
     $O/inet/networklayer/ted/LsrProtocolDissector.o \
     $O/inet/networklayer/ted/Ted.o \
@@ -1446,7 +1446,6 @@ OBJS = \
     $O/inet/networklayer/contract/ipv6/Ipv6Address_m.o \
     $O/inet/networklayer/contract/ipv6/Ipv6SocketCommand_m.o \
     $O/inet/networklayer/diffserv/Dscp_m.o \
-    $O/inet/networklayer/extras/tarpf/TarpFHeader_m.o \
     $O/inet/networklayer/flooding/FloodingHeader_m.o \
     $O/inet/networklayer/icmpv6/Icmpv6Header_m.o \
     $O/inet/networklayer/icmpv6/Ipv6NdMessage_m.o \
@@ -1469,6 +1468,7 @@ OBJS = \
     $O/inet/networklayer/rsvpte/RsvpPathMsg_m.o \
     $O/inet/networklayer/rsvpte/RsvpResvMsg_m.o \
     $O/inet/networklayer/rsvpte/SignallingMsg_m.o \
+    $O/inet/networklayer/tarpf/TarpFHeader_m.o \
     $O/inet/networklayer/ted/LinkStatePacket_m.o \
     $O/inet/networklayer/ted/Ted_m.o \
     $O/inet/networklayer/wiseroute/WiseRouteHeader_m.o \
@@ -1662,7 +1662,6 @@ MSGFILES = \
     inet/networklayer/contract/ipv6/Ipv6Address.msg \
     inet/networklayer/contract/ipv6/Ipv6SocketCommand.msg \
     inet/networklayer/diffserv/Dscp.msg \
-    inet/networklayer/extras/tarpf/TarpFHeader.msg \
     inet/networklayer/flooding/FloodingHeader.msg \
     inet/networklayer/icmpv6/Icmpv6Header.msg \
     inet/networklayer/icmpv6/Ipv6NdMessage.msg \
@@ -1685,6 +1684,7 @@ MSGFILES = \
     inet/networklayer/rsvpte/RsvpPathMsg.msg \
     inet/networklayer/rsvpte/RsvpResvMsg.msg \
     inet/networklayer/rsvpte/SignallingMsg.msg \
+    inet/networklayer/tarpf/TarpFHeader.msg \
     inet/networklayer/ted/LinkStatePacket.msg \
     inet/networklayer/ted/Ted.msg \
     inet/networklayer/wiseroute/WiseRouteHeader.msg \

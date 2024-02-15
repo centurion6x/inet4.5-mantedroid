@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from inet/networklayer/extras/tarpf/TarpFHeader.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from inet/networklayer/tarpf/TarpFHeader.msg.
 //
 
 #ifndef __INET_TARPFHEADER_M_H
@@ -52,7 +52,7 @@ class TarpFHeader;
 namespace inet {
 
 /**
- * Class generated from <tt>inet/networklayer/extras/tarpf/TarpFHeader.msg:29</tt> by opp_msgtool.
+ * Class generated from <tt>inet/networklayer/tarpf/TarpFHeader.msg:29</tt> by opp_msgtool.
  * <pre>
  * class TarpFHeader extends NetworkHeaderBase
  * {

@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package inet.networklayer.extras.tarpf;
+package inet.networklayer.tarpf;
 
 import inet.networklayer.base.NetworkProtocolBase;
 import inet.networklayer.contract.INetworkProtocol;

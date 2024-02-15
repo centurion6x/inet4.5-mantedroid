@@ -1017,6 +1017,7 @@ void Udp::processUDPPacket(Packet *udpPacket) {
         SockDesc *sd = findSocketForUnicastPacket(destAddr, destPort, srcAddr,
                 srcPort);
         if (!sd) {
+            EV_DEBUG << "socket not found unicast" << endl ;
             EV_WARN << "No socket registered on port " << destPort << "\n";
             udpPacket->setFrontOffset(udpHeaderPopPosition);
             processUndeliverablePacket(udpPacket);

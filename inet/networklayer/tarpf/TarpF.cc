@@ -18,7 +18,7 @@
 #include "inet/networklayer/common/HopLimitTag_m.h"
 #include "inet/networklayer/common/L3AddressTag_m.h"
 #include "inet/networklayer/contract/IL3AddressType.h"
-#include "TarpF.h"
+#include "inet/networklayer/tarpf/TarpF.h"
 
 namespace inet {
 
@@ -66,7 +66,12 @@ void TarpF::initialize(int stage) {
 
         }
 
-    } else if (stage == INITSTAGE_NETWORK_LAYER) {
+    } 
+    else if (stage == INITSTAGE_NETWORK_INTERFACE_CONFIGURATION) {
+        for (int i = 0; i < interfaceTable->getNumInterfaces(); i++)
+            interfaceTable->getInterface(i)->setHasModulePathAddress(true);
+    }
+    else if (stage == INITSTAGE_NETWORK_LAYER) {
         auto ie = interfaceTable->findFirstNonLoopbackInterface();
         if (ie != nullptr)
             myNetwAddr = ie->getNetworkAddress();
@@ -97,6 +102,7 @@ void TarpF::finish() {
 
 void TarpF::handleUpperPacket(Packet *packet) {
     encapsulate(packet);
+    EV_DEBUG << "parsing to tarpfheader" << endl ;
     auto tarpfHeader = packet->peekAtFront<TarpFHeader>();
 
     if (plainFlooding) {
@@ -323,7 +329,7 @@ return false;
 
 void TarpF::decapsulate(Packet *packet) {
 EV << " decapsulating: " << packet << endl;
-
+EV_DEBUG << "Casting happens here" << endl; 
 auto tarpfHeader = packet->popAtFront<TarpFHeader>();
 auto payloadLength = tarpfHeader->getPayloadLengthField();
 if (packet->getDataLength() < payloadLength) {
@@ -368,7 +374,7 @@ pkt->setChunkLength(b(headerLength));
 
 auto hopLimitReq = appPkt->removeTagIfPresent<HopLimitReq>();
 int Hb = (hopLimitReq != nullptr) ? hopLimitReq->getHopLimit() : -1;
-delete &hopLimitReq;
+// delete &hopLimitReq;
 
 pkt->setSeqNum(seqNum);
 seqNum++;

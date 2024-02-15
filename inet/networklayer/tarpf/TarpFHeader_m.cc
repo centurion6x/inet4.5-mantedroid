@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from inet/networklayer/extras/tarpf/TarpFHeader.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from inet/networklayer/tarpf/TarpFHeader.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
