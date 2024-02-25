@@ -229,6 +229,7 @@ bool L3Address::isBroadcast() const
             return toMac().isBroadcast();
 
         case L3Address::MODULEID:
+            EV_DEBUG << "moduleID is broadcast called" << endl ;
             return toModuleId().isBroadcast();
 
         case L3Address::MODULEPATH:

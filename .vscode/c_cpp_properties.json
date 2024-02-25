@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/gamunu/omnetpp/include/**"
+                "/home/gamunu-home/omnetpp/include/**"
             ],
             "defines": [],
             "cStandard": "c17",
